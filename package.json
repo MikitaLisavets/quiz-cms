@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "aws:upload": "aws s3 sync dist s3://quiz-cms --exclude .DS_Store",
+    "deploy": "yarn run aws:upload"
   },
   "dependencies": {
     "react": "^18",
